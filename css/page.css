@@ -1,0 +1,927 @@
+html, body { 
+    max-width: 100% !important; 
+    overflow-x: hidden !important; 
+    list-style-type: none;
+    margin-top: -0.1%;
+    background-color: #f4edde;
+}
+
+.logo {
+    float: left;
+    width: 15%;
+}
+
+.logo > img {
+    text-align: center;
+    width: 20%;
+    height: auto; 
+}
+
+.recherche {
+    left: 25%;
+    width: 100%;
+    margin-top: 1%;
+    /* background-color: red; */
+    overflow-y: hidden;
+    max-height: 70%;
+}
+.profil{
+    left:160px;
+    position:relative;
+    font-size: 150%;
+    top:80%
+}
+.recherche > textarea {
+    width: 50%;
+    height: 30px;
+    font-size: 15pt;
+    resize: none;
+}
+
+.recherche > button {
+    width: 3%;
+    height: 30px;
+    padding: 0;
+    position: absolute;
+}
+
+.recherche > button > img {
+    width: 3%;
+    height: 30px;
+}
+
+button {
+    font-size: 10pt;
+}
+
+.menu {
+    clear: both;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    height: 10%;
+
+}
+
+.menu_1 {   
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12pt;
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    color: gray;
+    padding: 0.5%;
+}
+
+
+.profil_log {
+    position: relative;
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-top: -3%;
+}
+
+.profil_redirection {
+    height: auto;
+    border: 2px solid black;
+    color: gray;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: -300%; 
+    top: -140%;
+    padding: 2px 5px 2px 5px; /* Ajustez la valeur de padding selon vos besoins */
+}
+
+
+.log{
+    position: relative;
+    left:24.5%;  
+    text-decoration: none;
+    color: gray ;
+    padding: 5px;
+    top:-11px;
+    border: solid;
+    font-size: 120%;
+}
+
+.log2 {
+    position: relative;
+    float: right;  
+    text-decoration: none;
+    color: gray ;
+    padding: 5px;
+    top: -11px;
+    border: solid;
+    font-size: 120%;
+    transform: translateY(30%);
+}
+
+
+
+
+
+
+
+
+
+
+/***********************************Fichier Login**************************************************/
+
+#log_page{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px; 
+    display: inline-block;
+    opacity: 90%;
+    background-color: lightgrey;
+    z-index: 2;
+}
+
+
+#log_page > form{    display: inline;
+    margin: 10px;
+}
+
+/***********************************Fichier Footer**************************************************/
+
+.container_liste {
+    display: flex;
+    justify-content: space-between;
+}
+.liste_gauche, .liste_middle, .liste_droite {
+    flex: 1;
+    display: flex;
+}
+.liste_gauche {
+    justify-content: flex-start;
+}
+.liste_middle {
+    justify-content: center;
+}
+.liste_droite {
+    justify-content: flex-end;
+}
+
+.liste_deco{
+    margin-right: 10%;
+    margin-top: 5%;
+    width: 60%;
+}
+
+
+/***********************************Fichier Accueil**************************************************/
+
+.banniere {
+    position: relative;
+    height: 50vh; 
+    overflow: hidden;
+    margin-top: 0.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+.banniere > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; /* Couvre toute la div */
+    object-position: top; 
+    z-index: 0; /* Place l'image en arrière-plan */
+}
+
+.banniere-content {
+    position: relative;
+    z-index: 1; /* Assure que le contenu est au-dessus de l'image de fond */
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour améliorer la lisibilité du texte */
+    padding: 20px;
+    border-radius: 10px; /* Optionnel : pour un effet arrondi */
+    text-align: center; /* Centre le texte */
+    color: white; /* Texte en blanc pour contraster avec l'image de fond */
+}
+
+.banniere button {
+    border: 2px solid white; /* Ajoute une bordure blanche */
+    padding: 10px; /* Ajouter du padding pour un meilleur espacement */
+    display: inline-block; /* Pour que le padding et la bordure soient appliqués correctement */
+    background-color: transparent; /* Fond transparent */
+    color: white; /* Couleur du texte en blanc */
+    cursor: pointer; /* Curseur en forme de main */
+    border-radius: 5px; /* Bords arrondis */
+}
+
+.banniere button:hover {
+    background-color: white; /* Fond blanc au survol */
+    color: black; /* Texte noir au survol */
+}
+
+.container_accueil {
+    display: flex;
+    align-items: stretch; /* S'assure que les éléments enfants ont la même hauteur */
+}
+
+.affiche_tenue,
+.affiche_meteo {
+    flex: 1; /* Prend tout l'espace disponible de manière égale */
+    border: 1px solid #ccc; /* Optionnel, pour visualiser les bordures des éléments */
+    padding: 10px; /* Optionnel, pour ajouter de l'espace intérieur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    text-align: center;
+    border: 2px solid black;
+    margin: 2%;
+    position: relative;
+}
+
+
+.table-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Fusionne les bordures */
+}
+
+table, th, td {
+    border: 1px solid black; /* Bordure pour le tableau */
+}
+
+th, td {
+    padding: 10px; /* Ajoute du padding pour un meilleur espacement */
+    text-align: center; /* Centre le texte */
+}
+
+.hidden_form_meteo {
+    display: none;
+}
+
+.titre_accueil {
+    text-align: center; 
+    margin: 0 0 2% 0;
+}
+
+.affiche_tenue > img {
+    max-height: 50%; 
+    width: auto; 
+    object-fit: contain;
+    align-self: center; 
+    margin-bottom: 0; 
+}
+
+
+
+#fleche_haut_1{
+    position: absolute;
+    top: -600%;
+    color: red;
+    width: 20%;
+  display:none ;
+  text-align: center;
+}
+
+#fleche_haut_2{
+    position: absolute;
+    top: -600%;
+    right: 59%;
+    z-index: 9999; /* Assure que le message est au-dessus de tout le contenu */
+    color: red;
+    display: none;
+    text-align: center;
+    width: 20%;
+}
+
+#fleche_haut_3{
+    position: absolute;
+    top: -600%;
+    right: 40%;
+    z-index: 9999; /* Assure que le message est au-dessus de tout le contenu */
+    color: red;
+    display: none;
+    text-align: center;
+    width: 20%;
+}
+
+#fleche_haut_4{
+    position: absolute;
+    top: -600%;
+    right: 20%;
+    z-index: 9999; /* Assure que le message est au-dessus de tout le contenu */
+    color: red;
+    display: none;
+    text-align: center;
+    width: 20%;
+}
+
+#fleche_haut_5{
+    position: absolute;
+    top: -600%;
+    right: 0%;
+    z-index: 9999; /* Assure que le message est au-dessus de tout le contenu */
+    color: red;
+    display: none;
+    text-align: center;
+    width: 20%;
+}
+
+
+
+#texte_1{
+    position: absolute;
+    top: -520%;
+    left: 10%;
+    z-index: 9999; /* Assure que le message est au-dessus de tout le contenu */
+    color: red;
+    display: none;
+    text-align: center;
+    width: 20%;
+    border: 2px solid red;
+    border-radius: 50%;
+    padding: 2%;
+}
+
+#texte_2{
+    position: absolute;
+    top: -520%;
+    left: 70%;
+    z-index: 9999; /* Assure que le message est au-dessus de tout le contenu */
+    color: red;
+    display: none;
+    text-align: center;
+    width: 20%;
+    border: 2px solid red;
+    border-radius: 50%;
+    padding: 2%;
+}
+
+#texte_3{
+    position: absolute;
+    top: -610%;
+    z-index: 9999; /* Assure que le message est au-dessus de tout le contenu */
+    color: red;
+    display: none;
+    text-align: center;
+    width: 95.5%;
+    height: 180%;
+    border: 2px solid red;
+    padding: 2%;
+}
+
+#fleche_haut_1 > img, #fleche_haut_2 > img, #fleche_haut_3 > img, #fleche_haut_4 > img, #fleche_haut_5 > img {
+    width: 5%;
+    height: auto;
+}
+
+
+
+.fleche_container_accueil{
+
+  display:block;;
+  position: relative
+}
+
+.blurred {
+    filter: blur(5px);
+}
+
+.unblurred {
+    filter: blur(none);
+}
+
+/***********************************Fichier Profil**************************************************/
+
+#section-pseudo, #section-prenom, #section-email, #section-loc, #section-mdp{
+    margin-top: -8%;
+}
+
+.app-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 2%;
+}
+
+.app-container .container-profil {
+    display: flex;
+    width: 100%;
+}
+
+.app-container .sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.app-container .menu-item {
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.app-container .menu-item:hover {
+    background-color: #ccc;
+}
+
+.app-container .section {
+    display: none;
+    margin-top: 20px;
+}
+
+.app-container .additional-input {
+    display: none;
+}
+
+.app-container .summary {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.app-container .profile-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-container .profile-picture {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+    display: flex; /* Ajout de l'affichage flex pour centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+.profile-letter {
+    font-size: 24px; /* Ajustez la taille de la lettre selon vos préférences */
+}
+
+
+
+.drapeau_profil{
+    width: 50px;
+    height: auto;
+    position: absolute;
+    right: 5%;
+    top: 22%;
+}
+
+.app-container .profile-info {
+    text-align: center;
+}
+
+.app-container .badge {
+    background-color: #ffcc00;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.app-container .button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.app-container .button:hover {
+    background-color: #45a049;
+}
+
+/***********************************Fichier Propos**************************************************/
+
+.principal_propos {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container_propos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #f8ecc3;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    margin: 2%;
+}
+
+.card img {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+}
+
+/***********************************Fichier Inscription**************************************************/
+
+
+.container_inscription {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+.principal_form1 {
+    flex: 2;
+}
+
+.principal_form {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15%;
+    border-radius: 5px;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+
+.h1_form {
+    text-align: center;
+    color: #0066b2;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn, .btn-yes-no {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover, .btn-yes-no:hover {
+    background-color: #ff9900;
+}
+
+.p_form {
+    text-align: center;
+}
+
+.p_form a {
+    color: #0066b2;
+    text-decoration: none;
+}
+
+.p_form a:hover {
+    text-decoration: underline;
+}
+
+/***********************************Fichier Admin**************************************************/
+
+.principal-admin {
+    font-family: Arial, sans-serif;
+    margin-top: 0.5%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-admin {
+    display: flex;
+}
+
+.left-menu-admin {
+    width: 200px;
+    text-align: center;
+    background-color: #636363;
+}
+
+.left-menu-admin ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-menu-admin ul li {
+    margin: 10%;
+}
+
+.left-menu-admin ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5%;
+}
+
+.left-menu-admin ul li a:hover {
+    border: 2px solid white;
+    border-radius: 50%;
+    
+}
+
+.content-body-admin {
+    background-color: #bfbeb4;
+    color: white;
+    flex-grow: 1;
+}
+
+.content-div-admin {
+    display: none;
+}
+
+/* Style de base pour le tableau */
+.table-admin {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Style pour les en-têtes du tableau */
+.th-admin, .td-admin {
+    padding: 12px 15px;
+    border: 1px solid black;
+
+}
+
+/* Style de survol des lignes du tableau */
+
+
+/* Style spécifique pour le tableau à l'intérieur d'un conteneur */
+#main2 {
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tr-admin {
+    cursor: pointer;
+}
+
+.selected-row {
+    background-color: #f0f0f0; /* Couleur de surbrillance */
+    color: bl;
+}
+
+/* Ajout de marge et centrage */
+#autoriser table {
+    margin: 0 auto;
+}
+
+#interdire table{
+    margin: 0 auto;
+
+}
+
+/* Style pour les cellules */
+.td-admin {
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-group-admin{
+    text-align: center;
+    bottom: 0;
+}
+
+/***********************************Fichier Messages**************************************************/
+
+.container {
+    display: flex;
+    height: 62vh; /* 100% de la hauteur de la fenêtre */
+}
+.conversations {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    padding: 1%;
+    margin-top: 1%;
+    overflow-y: auto; /* Pour ajouter un défilement si le contenu dépasse la hauteur */
+    background-color: #d7cab2;
+
+}
+.messages {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    margin-top: 1%;
+    height: 89%; 
+    background-color : #ded4c7;
+}
+.message-container {
+    flex: 1;
+    overflow-y: auto;
+    height: 80%;
+    display: none; /* Masquer les messages par défaut */
+    scroll-behavior: smooth; /* Défilement lisse */
+    margin-top:2%;
+}
+.messagedroite {
+    border-bottom: 1px solid #ddd;
+    padding: 2% 5% 2% 2%;
+    text-align: right;
+}
+.messagedroite p {
+    margin: 5px 0;
+}
+.message {
+    border-bottom: 1px solid #ddd;
+    padding: 2% 5% 2% 2%;
+}
+.message p {
+    margin: 5px 0;
+}
+.titre-conversation {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.div-conversation {
+    text-align: center;
+    border: 1px solid black;
+    padding: 2% 2% 5% 2%;
+    margin-bottom: 2%;
+    display: block;
+    font-size: 15pt;
+}
+.nom-conversation {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-bottom: 2%;
+}
+.user-conversation {
+    float: right;
+    font-size: 9pt;
+    padding: 0;
+    margin: 0;
+}
+.message-form {
+    display: none;
+    padding: 1%;
+    border-top: 1px solid #ddd;
+}
+.message-form input[type="text"] {
+    flex: 1;
+    padding: 1%;
+    margin-right: 1%;
+}
+.message-form input[type="submit"] {
+    padding: 10px 20px;
+}
+
+.conversations ul{
+    padding: 0;
+}
+
+/***********************************Fichier Feed**************************************************/
+.container-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 2%;
+}
+
+.post-feed {
+    background-color: white;
+    width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    
+}
+
+.image-container-feed {
+    text-align: center;
+    margin: 2%;
+    float: left;
+    border-right: 1px solid black;
+    padding:1%;
+}
+
+.image-container-feed img {
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
+    max-height: 100%; /* S'assure que l'image ne dépasse pas la hauteur du conteneur */
+    object-fit: cover;
+}
+
+.content-feed {
+    padding: 3% 3% 0% 0%;
+    overflow-y: auto;
+}
+
+.input-comm {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    padding: 10px;
+    margin-top: 15.5%;
+}
+
+.input_text_comm {
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.input_text_comm:focus {
+    outline: none;
+}
+
+.submit_comm {
+    padding: 10px;
+    border: none;
+    font-size: 12pt;
+    background-color: white;
+    cursor: pointer;
+}

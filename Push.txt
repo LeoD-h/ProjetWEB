@@ -1,0 +1,5 @@
+git add .
+git commit -m "COMMENTAIRE"
+git push origin master
+git push origin master --force
+git remote add origin https://github.com/LeoD-h/ProjetWEB.git
