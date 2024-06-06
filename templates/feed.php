@@ -1,25 +1,28 @@
 <?php
-// Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION['idUser'])) {
-    header("Location:../index.php?view=messages");
+include_once ("libs/modele.php");
+include_once ("libs/maLibUtils.php"); // tprint
+include_once ("libs/maLibForms.php");
+    
+// Si la page est appelée directement par son adresse, on redirige en passant pas la page index
+if (basename($_SERVER["PHP_SELF"]) != "index.php") {
+    header("Location:../index.php?view=login");
     die("");
 }
+if (!valider("connecte", "SESSION")) {
+    include ("templates/login.php");
+} else {
+    ?>
+    <!DOCTYPE html>
+    <html lang="fr">
 
-include_once("libs/modele.php"); // listes
-include_once("libs/maLibUtils.php"); // tprint
-include_once("libs/maLibForms.php"); // mkTable, mkLiens, mkSelect ...
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-$PostsFeel = listerPost($_SESSION['idUser']);
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="page.css">
-</head>
-<body>
+        <link rel="stylesheet" href="page.css">
+    </head>
+
+    <body>
     <div class="container-feed">
         <div class="post-feed">
             <div class="image-container-feed">
@@ -76,4 +79,9 @@ $PostsFeel = listerPost($_SESSION['idUser']);
             </div>
         </div>
 </body>
-</html>
+
+    </html>
+
+    <?php
+}
+?>
