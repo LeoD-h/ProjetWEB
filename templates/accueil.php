@@ -69,7 +69,7 @@
                 }
 
                 if ($cityToUse) {
-                    $api_key = '0cf20a38d3af2a88183047f01385ff8f';
+                    $api_key = '**********************';
                     $url = "http://api.openweathermap.org/data/2.5/forecast?q=$cityToUse&appid=$api_key";
                     $response = file_get_contents($url);
                     $data = json_decode($response, true);
