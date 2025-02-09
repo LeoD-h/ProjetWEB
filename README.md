@@ -52,7 +52,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 Voici un aperçu de l'interface de **WeatherFit** :
 
-![Capture d'écran de WeatherFit]([photo])
+![Capture d'écran de WeatherFit]([./main])
 
 ---
 
